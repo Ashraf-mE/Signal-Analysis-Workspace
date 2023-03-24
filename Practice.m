@@ -38,5 +38,5 @@ fm = 5;
 % % see carefully around 10 Hz .A vestige was found before +10 Hz and also in
 % % case negative -10 Hz
 % %% 
-% % This is MR.COOl
+% I'm editing this file
 }
