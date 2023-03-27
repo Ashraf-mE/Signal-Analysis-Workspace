@@ -128,3 +128,52 @@ plot(f,abs(mf));
 xlabel("frequency (Hz)");
 ylabel("|m(f)|");
 title("Frequency response of message signal m(t)");
+
+
+            mf = fftshift(fft(ym,Nf));    
+            cf = fftshift(fft(yc,Nf));     
+            f = (-Nf/2:1:Nf/2-1)*fs/Nf;      
+            plot(f,abs(mf)); 
+            xlabel("Frequency (Hz) -->");
+            ylabel(" |m(f)| ");
+            title ('Frequency domain Message Signal');
+
+            plot(f,abs(cf));   
+            ylabel ('|c(f)|)');
+            xlabel("Frequency (Hz) -->");
+            title ('Frequency Domain Carrier Signal');
+
+            plot(f,abs(AM_fft)); 
+            title('Freq Response of AM Signal');
+            xlabel('frequency (Hz)');
+            ylabel(' |AM(F)|')
+
+            Vc = 2*AM.*sin(2*pi*fc*t);
+
+            [b,a] = butter(4,fc*2/fs);
+            ym_rec = filter(b,a,Vc);
+            ym_rec=ym_rec- mean(ym_rec); 
+
+            plot(t, ym_rec,'LineWidth',2);
+            hold on;
+            plot(t,ym,'r');   
+            title('demodulated AM signal with origional message signal');
+            legend("Demodulated AM signal","message signal");
+            xlabel('Time (s)');
+            ylabel('Amplitude (Volts)');
+
+            ym_rec_fft = fftshift(fft(ym_rec,Nf));             
+            f = (-Nf/2:1:Nf/2-1)*fs/Nf;
+            plot(f,abs(ym_rec_fft));
+            hold on;
+            title('Freq Response of demodulated AM signal y_m(t)');
+            xlabel('f(Hz)');
+            ylabel('|AM(F)|');
+
+            Nf=L;            
+            f_ym = fftshift(fft(ym,Nf));
+            f = (-Nf/2:1:Nf/2-1)*fs/Nf;
+            plot(f,abs(f_ym));
+            xlabel("frequency (Hz)");
+            ylabel("|m(f)|");
+            title("Frequency response of message signal m(t)");
