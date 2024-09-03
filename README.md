@@ -1,5 +1,5 @@
 # FComm_Project
-This is a Fundamentals of communication project work done in my 4th semester. It basically shows the analysis of the input sinusoidal signal such as it's message, carrier, modulated and demodualted signal in both frequency and time domain and also the signals respective properties such as bit rate error (BER), Noise figure, error signal, SNR and many more and the intresting part is it's completely a GUI and very easy to use.
+The analysis of the input sinusoidal signal such as it's message, carrier, modulated and demodualted signal in both frequency and time domain and also the signals respective properties such as bit rate error (BER), Noise figure, error signal, SNR and many more and the intresting part is it's completely a GUI and very easy to use.
 
 # How to use/run our project ?
 
