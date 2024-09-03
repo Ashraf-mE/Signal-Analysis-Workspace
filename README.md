@@ -7,4 +7,4 @@ Go the assests folder -> install the "Signal Analysis workspace.mlappinstall" fi
 
 # Sample Video output
 
-![Video here](https://github.com/Ashraf-mE/Signal-Analysis-Workspace/blob/main/assests/Sample_video.wmv)
+[![Demo](./assests/thumbnail.png)](https://youtu.be/v-NPHvnexWU)
